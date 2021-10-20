@@ -4,13 +4,11 @@
 
 
 <ion-content class="ion-no-padding">
-
-  <ion-button (click)="alertSimple()" expand="block" shape="round">
-    Simple
-  </ion-button>
-
-  <ion-button (click)="alertMultiple()" expand="block" shape="round">
-    Multiple
-  </ion-button>
-
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let boton of botones; let i=index" size="6">
+        <ion-button expand="full"  (click)="onclick(boton.numero)" [color]="boton.color">{{boton.nombre}}</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
