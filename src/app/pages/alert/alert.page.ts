@@ -30,7 +30,7 @@ export class AlertPage implements OnInit {
     {
       nombre: 'Aler confirm',
       numero: 3,
-      color: 'medium'
+      color: 'butano'
     },
     {
       nombre: 'Alert prompt',
@@ -40,7 +40,7 @@ export class AlertPage implements OnInit {
     {
       nombre: 'Alert radio',
       numero: 5,
-      color: 'warning'
+      color: 'cesped'
     },
     {
       nombre: 'Alert checkbox',
