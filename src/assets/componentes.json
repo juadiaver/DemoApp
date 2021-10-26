@@ -17,5 +17,25 @@
     "icono":"person-circle-outline",
     "color":"danger"
     
+  },
+  {
+    "nombre":"Infinity-Scroll",
+    "ruta":"",
+    "icono":"infinite-outline",
+    "color":"warning"
+    
+  },
+  {
+    "nombre":"Refreshing",
+    "ruta":"",
+    "icono":"at-outline",
+    "color":"medium"
+    
+  },
+  {
+    "nombre":"Loading",
+    "ruta":"/loading",
+    "icono":"layers-outline",
+    "color":"cesped"
   }
 ]    

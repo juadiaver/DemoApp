@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+import { Componente } from './interfaces/componente';
+import { ComponentesService } from './services/componentes.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private menu: MenuController,private _datos:ComponentesService) {}
+
+  public misComponentes:Componente[]=[];
+  async ngOnInit(){
+    this.misComponentes=await this._datos.getComponentes();
+
+  }
 }
