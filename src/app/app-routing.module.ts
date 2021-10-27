@@ -19,7 +19,8 @@ const routes: Routes = [
   {
     path: 'alert',
     loadChildren: () => import('./pages/alert/alert.module').then( m => m.AlertPageModule)
-  },  {
+  },
+  {
     path: 'usuarios',
     loadChildren: () => import('./pages/usuarios/usuarios.module').then( m => m.UsuariosPageModule)
   },
@@ -35,6 +36,11 @@ const routes: Routes = [
     path: 'ion-refresher',
     loadChildren: () => import('./pages/ion-refresher/ion-refresher.module').then( m => m.IonRefresherPageModule)
   },
+  {
+    path: 'ion-tab',
+    loadChildren: () => import('./pages/ion-tab/ion-tab.module').then( m => m.IonTabPageModule)
+  },
+  
 
 ];
 

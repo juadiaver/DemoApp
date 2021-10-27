@@ -37,5 +37,11 @@
     "ruta":"/loading",
     "icono":"layers-outline",
     "color":"cesped"
+  },
+  {
+    "nombre":"Ion Tab",
+    "ruta":"/ion-tab",
+    "icono":"reorder-two-outline",
+    "color":"dark"
   }
 ]    
