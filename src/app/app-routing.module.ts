@@ -27,6 +27,14 @@ const routes: Routes = [
     path: 'loading',
     loadChildren: () => import('./pages/loading/loading.module').then( m => m.LoadingPageModule)
   },
+  {
+    path: 'infiti-scroll',
+    loadChildren: () => import('./pages/infiti-scroll/infiti-scroll.module').then( m => m.InfitiScrollPageModule)
+  },
+  {
+    path: 'ion-refresher',
+    loadChildren: () => import('./pages/ion-refresher/ion-refresher.module').then( m => m.IonRefresherPageModule)
+  },
 
 ];
 

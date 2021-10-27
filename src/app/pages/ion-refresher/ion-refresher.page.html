@@ -1,0 +1,22 @@
+<app-cabecera [titulo]="'Refresher'" [color]="'medium'">
+  
+</app-cabecera>
+
+<ion-content>
+  <ion-refresher #miRefresher slot="fixed" (ionRefresh)="refresca($event)">
+    <ion-refresher-content 
+    refreshingSpinner="crescent" 
+    refreshingText="Cargando...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+    <ion-item *ngFor="let item of datos; let i = index;">
+      <ion-label>
+        Item {{i+1}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" shape="round">Desliza</ion-button>
+</ion-content>

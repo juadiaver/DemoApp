@@ -20,14 +20,14 @@
   },
   {
     "nombre":"Infinity-Scroll",
-    "ruta":"",
+    "ruta":"/infiti-scroll",
     "icono":"infinite-outline",
     "color":"warning"
     
   },
   {
     "nombre":"Refreshing",
-    "ruta":"",
+    "ruta":"/ion-refresher",
     "icono":"at-outline",
     "color":"medium"
     
