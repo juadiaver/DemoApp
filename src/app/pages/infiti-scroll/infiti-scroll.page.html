@@ -1,19 +1,33 @@
-<app-cabecera [titulo]="'Infinity-Scroll'" [color]="'warning'">
-  
-</app-cabecera>
+<app-cabecera [titulo]="'Peliculas'" [color]="'warning'">
 
+</app-cabecera>
+<ion-searchbar [animated]="'true'" [placeholder]="'Busca peli'" [debounce]="250" (ionChange)="filtrar($event)">
+</ion-searchbar>
 <ion-content>
- 
-  <ion-list>
-    <ion-item *ngFor="let item of datos; let i = index;">
-      <ion-label>{{i+1}}</ion-label>
-    </ion-item>
+
+  <ion-list #miList>
+
+    <ion-item-sliding *ngFor="let item of datos|filtrar:filtraPor:'title'">
+
+
+      <ion-item (click)="veAPelicula(item)">
+        
+        <ion-label>{{item.title}} ({{item.vote_average}} - Nº Votos {{item.vote_count}})</ion-label>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="tertiary" (click)="muestraInfoPelicula(item)">
+          Puntuar
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+
+
   </ion-list>
 
-  <ion-infinite-scroll  #miInfinite threshold="100px" (ionInfinite)="loadData()">
-    <ion-infinite-scroll-content
-      loadingSpinner="crescent"
-      loadingText="cargando...">
+  <ion-infinite-scroll #miInfinite threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="cargando...">
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
 </ion-content>

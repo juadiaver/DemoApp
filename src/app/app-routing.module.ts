@@ -40,7 +40,12 @@ const routes: Routes = [
     path: 'ion-tab',
     loadChildren: () => import('./pages/ion-tab/ion-tab.module').then( m => m.IonTabPageModule)
   },
+  {
+    path: 'ficha-pelicula',
+    loadChildren: () => import('./pages/ficha-pelicula/ficha-pelicula.module').then( m => m.FichaPeliculaPageModule)
+  },
   
+
 
 ];
 

@@ -1,0 +1,12 @@
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+          <ion-card-title *ngIf="pelicula">{{pelicula.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-img *ngIf="pelicula" [src]="'https://image.tmdb.org/t/p/original'+pelicula.poster_path"></ion-img>
+          <ng-container *ngIf="pelicula">{{pelicula.overview}}</ng-container>
+        </ion-card-content>
+      </ion-card>
+</ion-content>

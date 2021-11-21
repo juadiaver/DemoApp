@@ -8,6 +8,8 @@ import { InfitiScrollPageRoutingModule } from './infiti-scroll-routing.module';
 
 import { InfitiScrollPage } from './infiti-scroll.page';
 import { ComponentesModule } from 'src/app/componentes/componentes.module';
+import { PeliculasService } from 'src/app/services/peliculas.service';
+import { PipesModule } from 'src/app/pipes/pipes.module';
 
 @NgModule({
   imports: [
@@ -15,8 +17,10 @@ import { ComponentesModule } from 'src/app/componentes/componentes.module';
     FormsModule,
     IonicModule,
     InfitiScrollPageRoutingModule,
-    ComponentesModule
+    ComponentesModule,
+    PipesModule
   ],
+  
   declarations: [InfitiScrollPage]
 })
 export class InfitiScrollPageModule {}
